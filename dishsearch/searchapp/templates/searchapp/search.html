@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dish Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .result-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .result-header {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .result-subheader {
+            color: #666;
+            font-size: 14px;
+        }
+        .rating-container {
+            text-align: right;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search for a Dish</h1>
+    <form method="get">
+        {{ form.as_p }}
+        <button type="submit">Search</button>
+    </form>
+
+    {% if results %}
+        <h2>Results:</h2>
+        {% for dish in results %}
+            <div class="result-container">
+                <div>
+                    <div class="result-header">{{ dish.name }}</div>
+                    <div class="result-subheader">{{ dish.restaurant.name }} - {{ dish.restaurant.location }}</div>
+                    <div class="result-subheader">Price: ₹{{ dish.price }}</div>
+                    <div class="result-subheader">Address: {{ dish.restaurant.name }}, {{ dish.restaurant.address }}</div>
+                </div>
+                <div class="rating-container">
+                    <div>User Rating: {{ dish.restaurant.rating_text }}</div>
+                    <div>Average Rating: {{ dish.restaurant.aggregate_rating }}</div>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
