@@ -5,6 +5,8 @@ Admin-template based Django search application that can search through the names
 
 The Dish Search Project is a Django-based web application designed to allow users to search for dishes offered by various restaurants. The project uses fuzzy string matching to handle potential spelling errors in search queries, ensuring accurate and relevant search results. Additionally, the project leverages caching mechanisms to enhance search performance.
 
+![Image6](https://github.com/atharvt17/Django-search-application/blob/main/images/image6.png)
+
 ## Features
 
 - **Search for Dishes:** Users can search for dishes using a search bar.
