@@ -1,5 +1,5 @@
 from django.shortcuts import render
-import time
+#import time
 from django.core.cache import cache
 from .models import Dish
 from .forms import SearchForm
@@ -10,7 +10,7 @@ def search(request):
     results = []
 
     if 'query' in request.GET:
-        start_time = time.time()
+        #start_time = time.time()
         form = SearchForm(request.GET)
         if form.is_valid():
             query = form.cleaned_data['query']
@@ -27,5 +27,5 @@ def search(request):
                 cache.set(cache_key, results, 300)
 
 
-            print(f'Total time: {time.time() - start_time} seconds')
+            #print(f'Total time: {time.time() - start_time} seconds')
     return render(request, 'searchapp/search.html', {'form': form, 'results': results})
