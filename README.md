@@ -37,6 +37,9 @@ The project uses the `fuzzywuzzy` library to handle potential spelling errors in
 3. Filter matches with a confidence score above a certain threshold (e.g., 50%).
 4. Retrieve the dishes corresponding to the matched names from the database.
 
+![Image4](https://github.com/atharvt17/Django-search-application/blob/main/images/image4.png)
+
+
 ### Caching Mechanism
 
 To improve search performance, the application employs a caching mechanism using Django's caching framework. Here's how caching is implemented:
@@ -44,6 +47,11 @@ To improve search performance, the application employs a caching mechanism using
 1. When a user submits a search query, the application first checks if the results for that query are already cached.
 2. If cached results are found, they are returned immediately, reducing the need for database queries and speeding up the response time.
 3. If no cached results are found, the application performs the fuzzy matching and database query, then caches the results for future use.
+
+![Image3](https://github.com/atharvt17/Django-search-application/blob/main/images/image3.png)
+
+![Image5](https://github.com/atharvt17/Django-search-application/blob/main/images/image5.png)
+
 
 ## Installation
 
