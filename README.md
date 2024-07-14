@@ -62,7 +62,7 @@ To set up the project locally, follow these steps:
    ```bash
    python manage.py load_dishes restaurants_small.csv
    ```
-6.  **Run the development server:**:
+6. **Run the development server:**:
    ```bash
    python manage.py runserver
    ```
