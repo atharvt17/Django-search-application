@@ -23,6 +23,11 @@ The Dish Search Project is a Django-based web application designed to allow user
 3. The matched dish names are then used to query the database for the corresponding dishes.
 4. The search results are sorted by the restaurant's aggregate rating and displayed to the user.
 
+![Image1](https://github.com/atharvt17/Django-search-application/blob/main/images/image1.png)
+
+![Image2](https://github.com/atharvt17/Django-search-application/blob/main/images/image2.png)
+
+
 ### Handling Spelling Errors
 
 The project uses the `fuzzywuzzy` library to handle potential spelling errors in user queries. The fuzzy matching process works as follows:
